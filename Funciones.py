@@ -62,3 +62,17 @@ def eliminarRepetidos(lista):
             nuevaLista= nuevaLista + [i]
     return nuevaLista
 
+def sucesionUlam(num):
+    #variables
+    lista=[num]
+    if num<=0:
+        return "El numero debe ser mayor que 0"
+    while num!=1:
+        if num%2==0:
+            num=num/2
+            lista=lista + [int(num)]
+        else:
+            num=(num*3) + 1
+            lista=lista + [int(num)]
+    return lista
+
