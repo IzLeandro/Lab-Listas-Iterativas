@@ -3,7 +3,7 @@
 #Fecha de última Modificación: 22/10/2020 4:28pm
 #Versión: 3.8.5
 #import de funciones
-from Funciones import *
+from Funciones import separarListas,buscarElemento,crearLista,crearListaVocales,insertarElemento,eliminarRepetidos,sucesionUlam,alternada,listaAscendente,replicar,difConjuntos,unionConjuntos,intercepcionConjuntos,multiplicarListas
 #Funcion para validar
 def revisarSiNumeros(lista):
     for i in lista:   
@@ -186,6 +186,21 @@ def llamada13():
         print("los conjuntos solo pueden contener numeros.")
         return ""
     return print(intercepcionConjuntos(a,b))
+def llamada14():
+    try:
+        print("recuerde que debe ingresar los conjuntos en listas.")
+        a=eval(input("\nIngrese el conjunto A: "))
+        b=eval(input("\nIngrese el conjunto B: "))
+    except:
+        print("existe un error con los datos ingresados, recuerde utilizar comillas (\"\") para ingresar texto.")
+        return ""
+    if type(a)!=list or type(b)!=list:
+        print("En ambos conjuntos debe ingresar una lista.")
+        return ""
+    if not revisarSiNumeros(a) or not revisarSiNumeros(b):
+        print("los conjuntos solo pueden contener numeros.")
+        return ""
+    return print(multiplicarListas(a,b))
 def menu():
     print("-* Funciones disponibles. *-")
     print("1. Separar listas.")
