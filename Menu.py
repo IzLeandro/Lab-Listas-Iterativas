@@ -115,6 +115,77 @@ def llamada8():
         print("La lista debe contener unicamente numeros.")
         return ""
     return print(alternada(entrada))
+
+def llamada9():
+    try:
+        entrada=eval(input("\nIngrese la lista: "))
+    except:
+        print("existe un error con los datos ingresados, recuerde utilizar comillas (\"\") para ingresar texto.")
+        return ""
+    if type(entrada)!=list:
+        print("Debe ingresar una lista.")
+        return ""
+    if not revisarSiNumeros(entrada):
+        print("La lista debe contener unicamente numeros.")
+        return ""
+    return print(listaAscendente(entrada))
+
+def llamada10():
+    try:
+        lista=eval(input("\nIngrese la lista: "))
+        n=eval(input("\nIngrese la cantidad de veces: "))
+    except:
+        print("existe un error con los datos ingresados, recuerde utilizar comillas (\"\") para ingresar texto.")
+        return ""
+    if type(lista)!=list:
+        print("Debe ingresar una lista de forma correcta.")
+        return ""
+    if type(n)!=int:
+        print("la cantidad de veces debe ser un numero entero.")
+        return ""
+    return print(replicar(lista,n))
+def llamada11():#Funciona con strings, si se agrega correctamente(lo cual tambien se checkea c:)
+    try:
+        print("recuerde que debe ingresar los conjuntos en listas.")
+        a=eval(input("\nIngrese el conjunto A: "))
+        b=eval(input("\nIngrese el conjunto B: "))
+    except:
+        print("existe un error con los datos ingresados, recuerde utilizar comillas (\"\") para ingresar texto.")
+        return ""
+    if type(a)!=list or type(b)!=list:
+        print("En ambos conjuntos debe ingresar una lista.")
+        return ""
+    return print(difConjuntos(a,b))
+def llamada12():#solicita que solo con numeros enteros, validacion agregada.
+    try:
+        print("recuerde que debe ingresar los conjuntos en listas.")
+        a=eval(input("\nIngrese el conjunto A: "))
+        b=eval(input("\nIngrese el conjunto B: "))
+    except:
+        print("existe un error con los datos ingresados, recuerde utilizar comillas (\"\") para ingresar texto.")
+        return ""
+    if type(a)!=list or type(b)!=list:
+        print("En ambos conjuntos debe ingresar una lista.")
+        return ""
+    if not revisarSiNumeros(a) or not revisarSiNumeros(b):
+        print("los conjuntos solo pueden contener numeros.")
+        return ""
+    return print(unionConjuntos(a,b))
+def llamada13():
+    try:
+        print("recuerde que debe ingresar los conjuntos en listas.")
+        a=eval(input("\nIngrese el conjunto A: "))
+        b=eval(input("\nIngrese el conjunto B: "))
+    except:
+        print("existe un error con los datos ingresados, recuerde utilizar comillas (\"\") para ingresar texto.")
+        return ""
+    if type(a)!=list or type(b)!=list:
+        print("En ambos conjuntos debe ingresar una lista.")
+        return ""
+    if not revisarSiNumeros(a) or not revisarSiNumeros(b):
+        print("los conjuntos solo pueden contener numeros.")
+        return ""
+    return print(intercepcionConjuntos(a,b))
 def menu():
     print("-* Funciones disponibles. *-")
     print("1. Separar listas.")
@@ -123,7 +194,7 @@ def menu():
     print("4. Lista random.")
     print("5. Agregar en lista.")
     print("6. Eliminar elementos repetidos.")
-    print("7. Suceción ULAM.")#terminado hasta aca
+    print("7. Suceción ULAM.")
     print("8. Alternativos.")
     print("9. Ascendente.")
     print("10. Replicar.")
@@ -157,12 +228,36 @@ def menu():
         llamada6()
         input("Presione una tecla para continuar...")
         return ""
-    if entrada=="7":
+    elif entrada=="7":
         llamada7()
         input("Presione una tecla para continuar...")
         return ""
-    if entrada=="8":
+    elif entrada=="8":
         llamada8()
+        input("Presione una tecla para continuar...")
+        return ""
+    elif entrada=="9":
+        llamada9()
+        input("Presione una tecla para continuar...")
+        return ""
+    elif entrada=="10":
+        llamada10()
+        input("Presione una tecla para continuar...")
+        return ""
+    elif entrada=="11":
+        llamada11()
+        input("Presione una tecla para continuar...")
+        return ""
+    elif entrada=="12":
+        llamada12()
+        input("Presione una tecla para continuar...")
+        return ""
+    elif entrada=="13":
+        llamada13()
+        input("Presione una tecla para continuar...")
+        return ""
+    elif entrada=="14":
+        llamada14()
         input("Presione una tecla para continuar...")
         return ""
 menu()
