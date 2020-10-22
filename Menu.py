@@ -4,6 +4,12 @@
 #Versión: 3.8.5
 #import de funciones
 from Funciones import *
+#Funcion para validar
+def revisarSiNumeros(lista):
+    for i in lista:   
+        if type(i)!=int:
+            return False
+    return True
 #Funciones
 def llamada1():
     entrada=[]
@@ -96,6 +102,19 @@ def llamada7():
     print(sucesionUlam(entrada))
     return ""
 
+def llamada8():
+    try:
+        entrada=eval(input("\nIngrese la lista: "))
+    except:
+        print("existe un error con los datos ingresados, recuerde utilizar comillas (\"\") para ingresar texto.")
+        return ""
+    if type(entrada)!=list:
+        print("Debe ingresar una lista.")
+        return ""
+    if not revisarSiNumeros(entrada):
+        print("La lista debe contener unicamente numeros.")
+        return ""
+    return print(alternada(entrada))
 def menu():
     print("-* Funciones disponibles. *-")
     print("1. Separar listas.")
@@ -118,28 +137,32 @@ def menu():
         llamada1()
         input("Presione una tecla para continuar...")
         return ""
-    if entrada=="2":
+    elif entrada=="2":
         llamada2()
         input("Presione una tecla para continuar...")
         return ""
-    if entrada=="3":
+    elif entrada=="3":
         llamada3()
         input("Presione una tecla para continuar...")
         return ""
-    if entrada=="4":
+    elif entrada=="4":
         llamada4()
         input("Presione una tecla para continuar...")
         return ""
-    if entrada=="5":
+    elif entrada=="5":
         llamada5()
         input("Presione una tecla para continuar...")
         return ""
-    if entrada=="6":
+    elif entrada=="6":
         llamada6()
         input("Presione una tecla para continuar...")
         return ""
     if entrada=="7":
         llamada7()
+        input("Presione una tecla para continuar...")
+        return ""
+    if entrada=="8":
+        llamada8()
         input("Presione una tecla para continuar...")
         return ""
 menu()
