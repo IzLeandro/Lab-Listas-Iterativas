@@ -269,7 +269,7 @@ def menu():
     print("             -* *-")
     entrada= input("Ingrese una opción: ")
     if entrada=="0":   
-        print("     )))")
+        print("\n     )))")
         print("    (((")
         print("  +-----+")
         print("  |     |]")
