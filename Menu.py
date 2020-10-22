@@ -1,17 +1,23 @@
 #Elaborado por: Leandro Camacho Aguilar y Celina Madrigal Murillo
 #Fecha de Creación: 20/10/2020 10:00am 
-#Fecha de última Modificación: 22/10/2020 4:28pm
+#Fecha de última Modificación: 22/10/2020 5:00pm
 #Versión: 3.8.5
-#import de funciones
+#import de funciones, se importan solo las 14 funciones necesarias.
 from Funciones import separarListas,buscarElemento,crearLista,crearListaVocales,insertarElemento,eliminarRepetidos,sucesionUlam,alternada,listaAscendente,replicar,difConjuntos,unionConjuntos,intercepcionConjuntos,multiplicarListas
 #Funcion para validar
 def revisarSiNumeros(lista):
+    """Funcionamiento:Realiza validaciones varias, y llama e imprime a la funcion encargada de dar el resultado  
+        Entradas: N/A
+        Salidas: retorna un print con el resultado. """
     for i in lista:   
         if type(i)!=int:
             return False
     return True
 #Funciones
 def llamada1():
+    """Funcionamiento:Realiza validaciones varias, y llama e imprime a la funcion encargada de dar el resultado  
+        Entradas: N/A
+        Salidas: retorna un print con el resultado. """
     entrada=[]
     try:
         entrada=eval(input("\nIngrese una lista: "))
@@ -25,6 +31,9 @@ def llamada1():
     return ""
 
 def llamada2():
+    """Funcionamiento:Realiza validaciones varias, y llama e imprime a la funcion encargada de dar el resultado  
+        Entradas: N/A
+        Salidas: retorna un print con el resultado. """
     numero=None
     entrada=[]
     try:
@@ -45,6 +54,9 @@ def llamada2():
     return ""
 
 def llamada3():
+    """Funcionamiento:Realiza validaciones varias, y llama e imprime a la funcion encargada de dar el resultado  
+        Entradas: N/A
+        Salidas: retorna un print con el resultado. """
     try:
         entrada=eval(input("\nIngrese una lista: "))
     except:
@@ -57,6 +69,9 @@ def llamada3():
     return ""
 
 def llamada4():
+    """Funcionamiento:Realiza validaciones varias, y llama e imprime a la funcion encargada de dar el resultado  
+        Entradas: N/A
+        Salidas: retorna un print con el resultado. """
     entrada=eval(input("\nIngrese numero: "))
     if type(entrada)!=int:
         print("El valor ingresado no es un numero entero.")
@@ -65,6 +80,9 @@ def llamada4():
     return ""
 
 def llamada5():
+    """Funcionamiento:Realiza validaciones varias, y llama e imprime a la funcion encargada de dar el resultado  
+        Entradas: N/A
+        Salidas: retorna un print con el resultado. """
     try:
         entrada=eval(input("\nIngrese el primer elemento: "))
         nuevo=eval(input("\nIngrese el nuevo elemento: "))
@@ -79,6 +97,9 @@ def llamada5():
     return ""
 
 def llamada6():
+    """Funcionamiento:Realiza validaciones varias, y llama e imprime a la funcion encargada de dar el resultado  
+        Entradas: N/A
+        Salidas: retorna un print con el resultado. """
     try:
         entrada=eval(input("\nIngrese una lista: "))
     except:
@@ -91,6 +112,9 @@ def llamada6():
     return ""
 
 def llamada7():
+    """Funcionamiento:Realiza validaciones varias, y llama e imprime a la funcion encargada de dar el resultado  
+        Entradas: N/A
+        Salidas: retorna un print con el resultado. """
     try:
         entrada=eval(input("\nIngrese el numero: "))
     except:
@@ -103,6 +127,9 @@ def llamada7():
     return ""
 
 def llamada8():
+    """Funcionamiento:Realiza validaciones varias, y llama e imprime a la funcion encargada de dar el resultado  
+        Entradas: N/A
+        Salidas: retorna un print con el resultado. """
     try:
         entrada=eval(input("\nIngrese la lista: "))
     except:
@@ -117,6 +144,9 @@ def llamada8():
     return print(alternada(entrada))
 
 def llamada9():
+    """Funcionamiento:Realiza validaciones varias, y llama e imprime a la funcion encargada de dar el resultado  
+        Entradas: N/A
+        Salidas: retorna un print con el resultado. """
     try:
         entrada=eval(input("\nIngrese la lista: "))
     except:
@@ -131,6 +161,9 @@ def llamada9():
     return print(listaAscendente(entrada))
 
 def llamada10():
+    """Funcionamiento:Realiza validaciones varias, y llama e imprime a la funcion encargada de dar el resultado  
+        Entradas: N/A
+        Salidas: retorna un print con el resultado. """
     try:
         lista=eval(input("\nIngrese la lista: "))
         n=eval(input("\nIngrese la cantidad de veces: "))
@@ -145,6 +178,9 @@ def llamada10():
         return ""
     return print(replicar(lista,n))
 def llamada11():#Funciona con strings, si se agrega correctamente(lo cual tambien se checkea c:)
+    """Funcionamiento:Realiza validaciones varias, y llama e imprime a la funcion encargada de dar el resultado  
+        Entradas: N/A
+        Salidas: retorna un print con el resultado. """
     try:
         print("recuerde que debe ingresar los conjuntos en listas.")
         a=eval(input("\nIngrese el conjunto A: "))
@@ -157,6 +193,9 @@ def llamada11():#Funciona con strings, si se agrega correctamente(lo cual tambie
         return ""
     return print(difConjuntos(a,b))
 def llamada12():#solicita que solo con numeros enteros, validacion agregada.
+    """Funcionamiento:Realiza validaciones varias, y llama e imprime a la funcion encargada de dar el resultado  
+        Entradas: N/A
+        Salidas: retorna un print con el resultado. """
     try:
         print("recuerde que debe ingresar los conjuntos en listas.")
         a=eval(input("\nIngrese el conjunto A: "))
@@ -172,6 +211,9 @@ def llamada12():#solicita que solo con numeros enteros, validacion agregada.
         return ""
     return print(unionConjuntos(a,b))
 def llamada13():
+    """Funcionamiento:Realiza validaciones varias, y llama e imprime a la funcion encargada de dar el resultado  
+        Entradas: N/A
+        Salidas: retorna un print con el resultado. """
     try:
         print("recuerde que debe ingresar los conjuntos en listas.")
         a=eval(input("\nIngrese el conjunto A: "))
@@ -187,6 +229,9 @@ def llamada13():
         return ""
     return print(intercepcionConjuntos(a,b))
 def llamada14():
+    """Funcionamiento:Realiza validaciones varias, y llama e imprime a la funcion encargada de dar el resultado  
+        Entradas: N/A
+        Salidas: retorna un print con el resultado. """
     try:
         print("recuerde que debe ingresar los conjuntos en listas.")
         a=eval(input("\nIngrese el conjunto A: "))
@@ -202,6 +247,9 @@ def llamada14():
         return ""
     return print(multiplicarListas(a,b))
 def menu():
+    """Funcionamiento: Encargada de llamar a las funciones de validacion auxiliares segun la eleccion del usuario
+        Entradas: N/A
+        Salidas: retorna un print con el resultado. """
     print("-* Funciones disponibles. *-")
     print("1. Separar listas.")
     print("2. Buscar elementos.")
@@ -217,8 +265,19 @@ def menu():
     print("12. Unión de conjuntos.")
     print("13. Intercepción de conjuntos.")
     print("14. Multiplicación de listas.")
+    print("0. Salir")
     print("             -* *-")
     entrada= input("Ingrese una opción: ")
+    if entrada=="0":   
+        print("     )))")
+        print("    (((")
+        print("  +-----+")
+        print("  |     |]")
+        print("  `-----'  ")
+        print("___________")
+        print("`---------'")
+        print("¡Hasta pronto!")  
+        return ""
     if entrada=="1":
         llamada1()
         input("Presione una tecla para continuar...")
@@ -275,4 +334,9 @@ def menu():
         llamada14()
         input("Presione una tecla para continuar...")
         return ""
+    else:
+        print("Por favor, ingrese un valor valido.")
+        input("Presione una tecla para continuar...")
+        menu()
+        return ''
 menu()
