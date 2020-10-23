@@ -105,10 +105,9 @@ def sucesionUlam(num):
     while num!=1:
         if num%2==0:
             num=num/2
-            lista=lista + [int(num)]
         else:
             num=(num*3) + 1
-            lista=lista + [int(num)]
+        lista=lista + [int(num)]
     return lista
 #Reto 8 - Alternativos
 def esPar(num):
